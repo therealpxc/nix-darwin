@@ -55,6 +55,7 @@ in
 
       ${cfg.activationScripts.etc.text}
       ${cfg.activationScripts.launchd.text}
+      ${cfg.activationScripts.linkFiles.text}
       ${cfg.activationScripts.time.text}
       ${cfg.activationScripts.extraActivation.text}
 

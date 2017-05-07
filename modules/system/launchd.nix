@@ -80,7 +80,7 @@ in
 
     system.activationScripts.launchd.text = ''
       # Set up launchd services in /Library/LaunchAgents and /Library/LaunchDaemons
-      echo "setting up launchd services..."
+      echo "setting up launchd services..." >&2
 
       ${concatMapStringsSep "\n" (attr: launchdActivation "LaunchAgents" attr.target) launchAgents}
       ${concatMapStringsSep "\n" (attr: launchdActivation "LaunchDaemons" attr.target) launchDaemons}
@@ -88,7 +88,7 @@ in
 
     system.activationScripts.userLaunchd.text = ''
       # Set up launchd services in ~/Library/LaunchAgents
-      echo "setting up user launchd services..."
+      echo "setting up user launchd services..." >&2
 
       ${concatMapStringsSep "\n" (attr: userLaunchdActivation attr.target) userLaunchAgents}
     '';

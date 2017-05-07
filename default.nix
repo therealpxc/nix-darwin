@@ -18,6 +18,7 @@ let
     modules =
       [ configuration
         packages
+        ./modules/activation/link-files.nix
         ./modules/alias.nix
         ./modules/system
         ./modules/system/activation-scripts.nix
@@ -29,6 +30,7 @@ let
         ./modules/system/defaults/trackpad.nix
         ./modules/system/etc.nix
         ./modules/system/launchd.nix
+        ./modules/system/manifest.nix
         ./modules/time
         ./modules/nix
         ./modules/nix/nix-darwin.nix

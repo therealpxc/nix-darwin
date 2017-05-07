@@ -10,7 +10,6 @@ let
 
   failedAssertions = map (x: x.message) (filter (x: !x.assertion) config.assertions);
 
-
   throwAssertions = res: if (failedAssertions != []) then throw "\nFailed assertions:\n${concatStringsSep "\n" (map (x: "- ${x}") failedAssertions)}" else res;
   showWarnings = res: fold (w: x: builtins.trace "[1;31mwarning: ${w}[0m" x) res config.warnings;
 
@@ -89,6 +88,7 @@ in
         systemConfig=$out
 
         ln -s ${cfg.build.etc}/etc $out/etc
+        ln -s ${cfg.build.manifest} $out/manifest.nix
         ln -s ${cfg.path} $out/sw
 
         mkdir -p $out/Library

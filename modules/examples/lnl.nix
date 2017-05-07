@@ -32,9 +32,9 @@
       pkgs.silver-searcher
 
       pkgs.nix-repl
-      pkgs.nox
+      # pkgs.nox
 
-      pkgs.pythonPackages.flake8
+      # pkgs.pythonPackages.flake8
     ];
 
   environment.extraOutputsToInstall = [ "man" ];
