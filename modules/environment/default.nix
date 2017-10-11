@@ -156,6 +156,7 @@ in {
 
        export NIX_USER_PROFILE_DIR="/nix/var/nix/profiles/per-user/$USER"
        export NIX_PROFILES="${concatStringsSep " " (reverseList cfg.profiles)}"
+       export PATH="${cfg.systemPath}"
     '';
 
     environment.variables =
